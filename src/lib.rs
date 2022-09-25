@@ -18,7 +18,7 @@ mod types {
     impl TextOrNullableText for Text {}
     impl TextOrNullableText for Nullable<Text> {}
 
-    #[derive(SqlType)]
+    #[derive(Clone, Copy, SqlType)]
     #[diesel(postgres_type(name = "regconfig"))]
     pub struct RegConfig;
 }
