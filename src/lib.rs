@@ -153,8 +153,7 @@ mod functions {
         #[sql_name = "websearch_to_tsquery"]
         fn websearch_to_tsquery_with_search_config(config: RegConfig, x: Text) -> TsQuery;
     }
-    // SELECT '"char"'::regtype::oid; 18
-    sql_function!(fn setweight(x: TsVector, w: CChar) -> TsVector);
+    sql_function!(fn setweight(x: TsVector, w: Text) -> TsVector);
 }
 
 mod dsl {
